@@ -44,7 +44,7 @@
       <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="575">
               <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -1069,12 +1069,12 @@
       <workItem from="1476702520996" duration="12087000" />
       <workItem from="1476758554548" duration="21017000" />
       <workItem from="1476789459407" duration="1376000" />
-      <workItem from="1476845539122" duration="20116000" />
+      <workItem from="1476845539122" duration="20619000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55261000" />
+    <option name="totallyTimeSpent" value="55764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-17" y="23" width="1440" height="807" extended-state="0" />
@@ -1587,7 +1587,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
+        <state relative-caret-position="575">
           <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
