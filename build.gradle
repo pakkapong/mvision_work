@@ -1,0 +1,32 @@
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.7.RELEASE")
+    }
+}
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+sourceCompatibility = 1.7
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.2.7.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf:1.2.7.RELEASE")
+    compile('net.sourceforge.nekohtml:nekohtml:1.9.22')
+    compile group: 'mysql', name: 'mysql-connector-java'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    compile group: 'com.h2database', name: 'h2'
+    compile("org.springframework.boot:spring-boot-starter-redis")
+    complie("org.codehaus.jackson:jackson-mapper-asl")
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+

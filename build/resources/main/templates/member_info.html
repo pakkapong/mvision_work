@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    Member info
+
+
+
+
+<script>
+    $( document ).ready(function() {
+        var session_id = localStorage.getItem("session_id");
+        //alert("member info =  "+session_id);
+
+        var request = $.ajax({
+            url: "check_session",
+            method: "POST",
+            data: { session_id: session_id },
+            dataType: "text"
+        });
+
+        request.done(function( msg ) {
+            if(msg=='false')
+            {
+                window.location.href = "/authentication";
+            }
+        });
+
+        request.fail(function( jqXHR, textStatus ) {
+            alert( "Request failed: " + textStatus );
+        });
+
+
+    });
+</script>
+
+
+</body>
+</html>
+

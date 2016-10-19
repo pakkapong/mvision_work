@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<form id="form">
+    <p>Username</p>
+    <input type="text" name="username" th:field="${customer.username}"/>
+    <p>Password</p>
+    <input type="password" name="password" th:field="${customer.password}"/>
+    <br> <br>
+    <input type="button" id="submitBtn" value="login"/>
+</form>
+
+<script>
+
+
+    $('#submitBtn').click(function() {
+        var data = $('#form').serialize();
+        //alert(data);
+        var request = $.ajax({
+            url: "login",
+            method: "POST",
+            data: data,
+            dataType: "html"
+        });
+
+        request.done(function( msg ) {
+            //alert("aaaaa" + request.getResponseHeader("session_id"));
+            //alert(msg);
+            if(msg == 'true') {
+                localStorage.setItem("session_id", request.getResponseHeader("session_id"));
+
+                window.location.href = "/memberinfo";
+            }
+            else
+                {
+                    alert("incorect login");
+                }
+        });
+
+        request.fail(function( jqXHR, textStatus ) {
+            alert( "Request failed: " + textStatus );
+        });
+
+    });
+
+
+
+
+</script>
+
+</body>
+</html>
